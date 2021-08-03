@@ -1,0 +1,5 @@
+class Constants:
+    SALT_LEN_MAX = 10
+    SALT_LEN_MIN = 6
+    SALT_EXPIRE_TIME = 360
+    TOKEN_EXPIRE_TIME = 3600 * 24 * 3
