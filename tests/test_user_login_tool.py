@@ -55,9 +55,9 @@ class TestUserLoginTool(unittest.TestCase):
         user_token = token_body['data']['token']
         with mock.patch('userLoginTool.utils.db_helper.DatabaseConnector.query_user_token', return_value={'token': user_token, 'expire_time': float('inf')}):
             user = loginNOut.varify_token(token)
+            loginNOut.stop()
             assert user
-        loginNOut.stop()
-
+    
 
 if __name__ == '__main__':
     unittest.main()
